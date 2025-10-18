@@ -239,6 +239,8 @@ void DevTools::setupFonts() {
     m_smallFont = add_font(Font_OpenSans, sizeof(Font_OpenSans), 10.f, def_ranges);
     m_monoFont = add_font(Font_RobotoMono, sizeof(Font_RobotoMono), 18.f, def_ranges);
     m_boxFont = add_font(Font_SourceCodeProLight, sizeof(Font_SourceCodeProLight), 23.f, box_ranges);
+
+    ImGui::GetIO().FontGlobalScale = Mod::get()->getSavedValue<float>("fontScale");
 }
 
 void DevTools::setup() {
