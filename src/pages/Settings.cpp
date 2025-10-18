@@ -85,6 +85,7 @@ void DevTools::drawSettings() {
         ImGui::GetIO().FontGlobalScale = fontScale;
         Mod::get()->setSavedValue<float>("fontScale", fontScale);
     }
+    log::debug("imgui fontglobalscale: {}", ImGui::GetIO().FontGlobalScale);
 
     
 #ifdef GEODE_IS_DESKTOP
@@ -260,3 +261,4 @@ void DevTools::drawSettings() {
         }
     }
 };*/
+
